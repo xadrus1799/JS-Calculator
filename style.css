@@ -1,55 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
-* { 
-    margin: 0;
+
+* {
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
-body { 
+  }
+  
+  body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: white;
-}
-.calculator {
+    background: #091921;
+  }
+  
+  .calc {
     position: relative;
     display: grid;
-}
-.calculator .value{
+  }
+  
+  .calc .value{
     grid-column: span 4;
-    height: 200px; 
+    height: 100px;
     text-align: right;
-    border: none; 
+    border: none;
     outline: none;
     padding: 10px;
-    font-size: 40px;
-}
-.calculator span{
+    font-size: 18px;
+  }
+  
+  .calc span {
     display: grid;
-    width: 70px;
-    height: 70px;
-}
-.bg{
-    background-color: lightgray;
-    border-radius: 50px;
-    text-align: center;
-    padding-top: 25px;
-
-}
-.zero{
-    background-color: gray;
-    color: white;
-    padding-top: 25px;
-    border-radius: 50px;
-    text-align: center;
-    /*padding-right: 100px;*/
-}
-.ow{ 
-    background-color: orange;
-    color: white;
-    padding-top: 25px;
-    border-radius: 50px;
-    text-align: center;
-}
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    background: #0c2835;
+    place-items: center;
+    border: 1px solid rgba(0,0,0,.1);
+  }
+  .calc span:active {
+    background: #74ff3b;
+    color: #111;
+  } 
+  /* special buttons */
+   #plus {
+    height: 120px;
+    color: #fff;
+    background: #00b7ff;
+    grid-row: 3 / span 2;
+    grid-column: 4;
+  }
+  #plus:active {
+    background: #74ff3b;
+    color: #111;
+  }
+  #res {
+    height: 120px;
+    color: #fff;
+    background: #db06e2;
+    grid-row: 5 / span 2;
+    grid-column: 4;
+  }
+  #res:active {
+    background: #74ff3b;
+    color: #111;
+  }
+  #zer {
+    width: 124px;
+    color: #fff;
+    background: #db06e2;
+    grid-row: 6 / span 2;
+    grid-column: 1 / span 2;
+  }
+  #zer:active {
+    background: #74ff3b;
+    color: #111;
+  }
